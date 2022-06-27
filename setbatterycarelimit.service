@@ -1,0 +1,11 @@
+[Unit]
+Description=Set battery care limit for LG laptops
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart= echo "80" | tee /sys/devices/platform/lg-laptop/battery_care_limit
+
+[Install]
+WantedBy=multi-user.target
