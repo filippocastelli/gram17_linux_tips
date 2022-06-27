@@ -18,7 +18,12 @@ See references [1] [2] [3].
 This happened to me while installing ```Kubuntu 20.0.4 LTS```: GRUB loads fine but when attempting to launch an actual distro it sistematically fails.
 This seems to be related to Thunderbolt issues. Proposed solutions include adding the ```pci=nommconf``` boot option in GRUB, but the only thing that actually worked for me was disabling temporarily Thunderbolt functionality.
 
-Repo [2] tells you how to do it but probably references an old BIOS version. On ```T2ZF03060``` you need to access BIOS, enable advanced settings with ```CTRL```+```SHIFT```+```ALT```+```F7```, select ```Advanced``` tab, then ```Intel Advanced Menu / Platform Settings / TCSS Platform Setting / Thunderbolt(TM) Configuration```. You can disable Thunderbolt entirely setting ```Integrated Thunderbolt(TM) Support``` to ```Disabled```.
+Repo [2] tells you how to do it but probably references an old BIOS version. On ```T2ZF03060``` you need to access BIOS, enable advanced settings with ```CTRL```+```SHIFT```+```ALT```+```F7```, select ```Advanced``` tab, then
+
+```Intel Advanced Menu / Platform Settings / TCSS Platform Setting / Thunderbolt(TM) Configuration```.
+
+You can disable Thunderbolt entirely by setting ```Integrated Thunderbolt(TM) Support``` to ```Disabled```.
+
 The live distro should boot normally now.
 
 Newer kernel versions (namely 5.13/5.15) don't seem to be affected by this problem: after installing the OS and updating the kernel you can re-enable Thunderbolt support.
