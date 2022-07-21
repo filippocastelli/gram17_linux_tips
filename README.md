@@ -28,6 +28,8 @@ The live distro should boot normally now.
 
 Newer kernel versions (namely 5.13/5.15) don't seem to be affected by this problem: after installing the OS and updating the kernel you can re-enable Thunderbolt support.
 
+EDIT: When attempting to install `Kubuntu 22.04` and kernel 5.18 new ACPI-related problems seem to emerge rendering the system unbootable again. Stick to 20.04 for now.
+
 ## Enabling Battery Care Limit
 See ref [5] [6]
 The ```lg-laptop``` kernel module exposes additional functionality for the LG Gram series, but most of them seem to work only under kernel version ```5.15```. 
